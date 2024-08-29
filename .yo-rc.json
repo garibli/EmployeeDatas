@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "20.11.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "emplys-list",
+    "libraryId": "e6a5a8b7-09b7-42dc-9dc4-ab2556b52ebd",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "emplysList",
+    "solutionShortDescription": "emplysList description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

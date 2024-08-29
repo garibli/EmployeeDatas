@@ -1,0 +1,203 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.empWebPart {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+.searchContainer {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.searchBox {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.employeeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.employeeCard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: visible;
+  z-index: 1;
+}
+
+.employeeCard:hover {
+  transform: translateY(-5px);
+  z-index: 10;
+}
+
+.employeeInfo h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.employeeInfo p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.livePersonaContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.livePersona {
+  display: inline-block;
+}
+
+.employeePopup {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: left;
+  overflow-wrap: break-word;
+  max-width: 300px;
+  white-space: normal;
+  transform: translate(-50%, -50%);
+}
+
+.employeeCard:hover .employeePopup {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .employeeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .searchBox {
+    width: 100%;
+    max-width: none;
+  }
+
+  .employeePopup {
+    max-width: 90vw;
+    transform: none;
+    left: 0;
+    right: 0;
+    top: 100%;
+  }
+}
+
+.searchContainer {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.searchBox {
+  padding: 10px;
+  width: 70%;
+  max-width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.searchOptionsButton {
+  padding: 10px;
+  border: none;
+  background-color: #0078d4;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #005a9e;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+.searchOptionsDropdown {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.searchOptionsDropdown.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, 10px);
+}
+
+.searchOptionsDropdown label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.searchOptionsDropdown input[type='radio'] {
+  margin-right: 8px;
+}

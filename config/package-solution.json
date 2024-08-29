@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "emplys-list-client-side-solution",
+    "id": "e6a5a8b7-09b7-42dc-9dc4-ab2556b52ebd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "emplysList description"
+      },
+      "longDescription": {
+        "default": "emplysList description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "emplys-list Feature",
+        "description": "The feature that activates elements of the emplys-list solution.",
+        "id": "819fcd47-c0df-4592-bc49-355cc9724c2c",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/emplys-list.sppkg"
+  }
+}
